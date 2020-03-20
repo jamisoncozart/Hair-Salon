@@ -7,7 +7,7 @@ namespace Bestaurant.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     {
-      return RedirectToAction("Index", "Stylist");
+      return View();
     }
   }
 }
