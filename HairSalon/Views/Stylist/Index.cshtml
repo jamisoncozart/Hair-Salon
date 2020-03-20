@@ -15,11 +15,15 @@
 <div class="row">
 @foreach(Stylist stylist in Model)
 {
-  <div class="card col-md-3">
-    <div class="card-body">
-      <h4 class="card-title">@stylist.Name</h4>
-      <p>@Html.ActionLink("See Details", "Show", new {id = stylist.StylistId}, new {@class = "btn btn-info"})</p>
-      <p>@Html.ActionLink("Delete", "Destroy", new {id = stylist.StylistId}, new {@class = "btn btn-danger"})</p>
+  <div class=" col-md-3">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">@stylist.Name</h4>
+        <div class="buttons">
+          <p>@Html.ActionLink("See Details", "Show", new {id = stylist.StylistId}, new {@class = "btn btn-info btn-sm"})</p>
+          <p>@Html.ActionLink("Delete", "Destroy", new {id = stylist.StylistId}, new {@class = "btn btn-danger btn-sm"})</p>
+        </div>
+      </div>
     </div>
   </div>
 }
