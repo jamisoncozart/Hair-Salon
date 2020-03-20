@@ -1,8 +1,60 @@
-body {
-  background-color: black;
+h1 {
+  text-align: center;
 }
-
 
 .col-md-3 {
   padding: 1rem;
+}
+
+.container {
+  padding-top: 2rem;
+}
+
+.card {
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card-body h4 {
+  margin: 0 0 2rem 0;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.buttons p {
+  margin: 0;
+}
+
+div#footer {
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	color:#CCC;
+	background:#333;
+  padding:8px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin: auto;
+  border: 1px solid black;
+  box-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+  padding: 2rem;
+}
+
+form .button {
+  margin: 1rem 0;
 }
