@@ -1,0 +1,25 @@
+@{Layout = "_Layout";}
+
+<h1>Welcome to Hair Salon</h1>
+<hr>
+
+@using HairSalon.Models;
+@model List<HairSalon.Models.Stylist>;
+
+<h2>Current stylists:</h2>
+
+@if(@Model.Count == 0)
+{
+  <p>Theres currently no entered stylists.."</p>
+}
+<div class="row">
+@foreach(Stylist stylist in Model)
+{
+  <div class="card col-md-3">
+    <div class="card-body">
+      <h4 class="card-title">@stylist.Name</h4>
+      <p>@Html.ActionLink("See Details", "Details", new {id = stylist.StylistId}, new {@class = "btn btn-info"})</p>
+    </div>
+  </div>
+}
+</div>
