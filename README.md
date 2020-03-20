@@ -32,23 +32,20 @@ Download the .zip file and extract all files into directory of your choice OR cl
 4. Run the following commands in MySQL to setup this project Database
     ```
     CREATE DATABASE `jamison_cozart`;
-    USE jamison_cozart;
-
-
-    FILL THIS IN
-    FILL THIS IN
-    FILL THIS IN
-    FILL THIS IN
-    FILL THIS IN
-    FILL THIS IN
-    FILL THIS IN
-    FILL THIS IN
-    FILL THIS IN
-    FILL THIS IN
-    FILL THIS IN
-    FILL THIS IN
-    FILL THIS IN
-
+    USE `jamison_cozart`;
+    CREATE TABLE `stylists` (
+        `StylistId` int NOT NULL AUTO_INCREMENT,
+        `Name` varchar(45) NOT NULL DEFAULT 'Name',
+        `Description` varchar(255) NOT NULL DEFAULT 'Description',
+        PRIMARY KEY (`StylistId`)
+    );
+    CREATE TABLE `clients` (
+        `ClientId` int NOT NULL AUTO_INCREMENT,
+        `Name` varchar(45) NOT NULL DEFAULT 'Client Name',
+        `Haircut` varchar(45) NOT NULL DEFAULT 'Haircut',
+        `StylistId` int NOT NULL DEFAULT '0',
+        PRIMARY KEY (`ClientId`)
+    );
     ```
 5. Compile and Run code:
     ```
