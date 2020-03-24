@@ -7,11 +7,11 @@ using System.Diagnostics;
 
 namespace HairSalon.Controllers
 {
-  public class ClientController : Controller 
+  public class ClientsController : Controller 
   {
     private readonly HairSalonContext _db;
 
-    public ClientController(HairSalonContext db)
+    public ClientsController(HairSalonContext db)
     {
       _db = db;
     }
@@ -28,7 +28,7 @@ namespace HairSalon.Controllers
     {
       _db.Clients.Add(newClient);
       _db.SaveChanges();
-      return RedirectToAction("Show", "Stylist", new { id = newClient.StylistId } );
+      return RedirectToAction("Show", "Stylists", new { id = newClient.StylistId } );
     }
   }
 }
